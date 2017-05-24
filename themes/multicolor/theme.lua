@@ -15,8 +15,8 @@ local os    = { getenv = os.getenv, setlocale = os.setlocale }
 
 local theme                                     = {}
 theme.confdir                                   = os.getenv("HOME") .. "/.config/awesome/themes/multicolor"
-theme.wallpaper                                 = theme.confdir .. "/wall.png"
-theme.font                                      = "xos4 Terminus 8"
+theme.wallpaper                                 = theme.confdir .. "/wall.jepg"
+theme.font                                      = "xos4 Terminus 10"
 theme.menu_bg_normal                            = "#000000"
 theme.menu_bg_focus                             = "#000000"
 theme.bg_normal                                 = "#000000"
@@ -31,7 +31,7 @@ theme.border_normal                             = "#1c2022"
 theme.border_focus                              = "#606060"
 theme.border_marked                             = "#3ca4d8"
 theme.menu_border_width                         = 0
-theme.menu_width                                = 130
+theme.menu_width                                = 200
 theme.menu_submenu_icon                         = theme.confdir .. "/icons/submenu.png"
 theme.menu_fg_normal                            = "#aaaaaa"
 theme.menu_fg_focus                             = "#ff8c00"
@@ -112,7 +112,7 @@ theme.cal = lain.widget.calendar({
 -- Weather
 local weathericon = wibox.widget.imagebox(theme.widget_weather)
 theme.weather = lain.widget.weather({
-    city_id = 2643743, -- placeholder (London)
+    city_id = 1815286, -- city_id for Chegdu CN
     notification_preset = { font = "xos4 Terminus 10", fg = theme.fg_normal },
     weather_na_markup = markup.fontfg(theme.font, "#eca4c4", "N/A "),
     settings = function()

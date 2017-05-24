@@ -34,8 +34,8 @@ theme.titlebar_bg_normal                        = "#3F3F3F"
 theme.titlebar_bg_focus                         = theme.bg_focus
 theme.titlebar_bg_normal                        = theme.bg_normal
 theme.titlebar_fg_focus                         = theme.fg_focus
-theme.menu_height                               = 16
-theme.menu_width                                = 140
+theme.menu_height                               = 20
+theme.menu_width                                = 250
 theme.menu_submenu_icon                         = theme.dir .. "/icons/submenu.png"
 theme.awesome_icon                              = theme.dir .. "/icons/awesome.png"
 theme.taglist_squares_sel                       = theme.dir .. "/icons/square_sel.png"
@@ -101,7 +101,6 @@ local separators = lain.util.separators
 -- Binary clock
 local binclock = require("themes.powerarrow.binclock"){
     height = 16,
-    show_seconds = true,
     color_active = theme.fg_normal,
     color_inactive = theme.bg_focus
 }
