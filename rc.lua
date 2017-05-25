@@ -171,7 +171,8 @@ local myawesomemenu = {
     { "Config", string.format("%s -e %s %s", terminal, editor, awesome.conffile) },
     { "Restart", awesome.restart },
     { "Quit", function() awesome.quit() end },
-    { "Shutdown", "shutdown -h now"}
+    { ">>_____Reboot_____<<", "reboot"},
+    { ">>___ Shutdown____<<", "shutdown -h now"}
 }
 
 local appmenu = freedesktop.menu.build({
@@ -186,7 +187,7 @@ awful.util.mymainmenu = freedesktop.menu.build({
         { "Atom", "atom" },
     },
     after = {
-        { "Lock", "xscreensaver-command --lock" },
+        { "Lock", "gnome-screensaver-command -l" },
     }
 })
 
@@ -621,7 +622,7 @@ client.connect_signal("request::titlebars", function(c)
         end)
     )
 
-    awful.titlebar(c, {size = 16}) : setup {
+    awful.titlebar(c, {size = 28}) : setup {
         { -- Left
             awful.titlebar.widget.iconwidget(c),
             buttons = buttons,
